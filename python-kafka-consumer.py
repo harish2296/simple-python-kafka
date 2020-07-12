@@ -11,7 +11,7 @@ collection = db.list_collection_names()[0]
 timestamp = datetime.now()
 result = {}
 csv_data = []
-header_arr = ['id','timestamp','pkt_in_bytes','pkt_out_bytes']
+header_arr = ['id','timestamp','first_name','last_name']
 
 for message in consumer:
     print(message.value)
