@@ -14,7 +14,7 @@ csv_data = []
 header_arr = ['id','timestamp','pkt_in_bytes','pkt_out_bytes']
 
 for message in consumer:
-    print(message)
+    print(message.value)
     csv_data = str(message.value).split(',')
     data = {header_arr[i] : str(csv_data[i]) for i in range(len(header_arr))}
     result = db.csvstats.insert_one(data)
