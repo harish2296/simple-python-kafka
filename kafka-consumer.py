@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 consumer = KafkaConsumer('csvdata',bootstrap_servers=['localhost:9092'],api_version=(0, 10))
 client = MongoClient(port=27017)
-db = client.mitdb
+db = client.db
 print(db.list_collection_names())
 collection = db.list_collection_names()[0]
 
