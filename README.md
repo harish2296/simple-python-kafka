@@ -1,20 +1,22 @@
 # simple-python-kafka
 - simple python kafka app with setup mentioned below .
 - producer produces contents of csv to a topic
-- consumer consumes contents and pushes to a mongoDb trough pyMongo client
+- consumer consumes contents and pushes to a mongoDb through pyMongo client
 
 #download link
  - https://kafka.apache.org/downloads
 
-#Paste the contents in your C:\kafka
+#Paste the contents in your C:\<kafka_2.13-2.5.0>
 
 #cmd
  - cd C:\kafka_2.13-2.5.0
  - bin\windows\zookeeper-server-start.bat config\zookeeper.properties
  - bin\windows\kafka-server-start.bat config\server.properties
 
-#Topic - > (communication channel) -> use of partitions allowed
-#Producer - > push data - > Consumer registered picks it.
+#few info
+ - Topic - > (communication channel) -> use of partitions allowed
+ - Producer - > push data - > Consumer registered picks it.
+ 
 #create topic
  - bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic csvdata
 #list topic
